@@ -1,0 +1,349 @@
+/* =============================================
+   RESPONSIVE.CSS — Neuro Transformers
+   Breakpoints:
+   xl  → max-width: 1280px
+   lg  → max-width: 1024px
+   md  → max-width: 768px
+   sm  → max-width: 480px
+   xs  → max-width: 360px
+============================================= */
+
+
+/* =============================================
+   XL — max-width: 1280px
+   (Container starts shrinking)
+============================================= */
+@media (max-width: 1280px) {
+
+    /* Footer 5-col → 3-col */
+    .footer__main {
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: var(--space-40) var(--space-32);
+    }
+}
+
+
+/* =============================================
+   LG — max-width: 1024px
+   (Two-col layouts start collapsing)
+============================================= */
+@media (max-width: 1024px) {
+
+    /* ── Header ── */
+    .header__nav {
+        display: none;
+    }
+
+    .header__cta {
+        display: none;
+    }
+
+    .header__hamburger {
+        display: flex;
+    }
+
+    /* ── Hero ── */
+    .hero__inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-48);
+        text-align: center;
+    }
+
+    .hero__left {
+        align-items: center;
+    }
+
+    .hero__right {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero__cta {
+        justify-content: center;
+    }
+
+    .hero_title_group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* ── About ── */
+    .about-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Services tabs ── */
+    .service-tab-container .tab-inner-panel {
+        grid-template-columns: 1fr 32%;
+    }
+
+    .tab-panel .panel-img-placeholder {
+        height: 280px;
+    }
+
+    /* ── Why section ── */
+    .why-section-inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-48);
+    }
+
+    .why-section-right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Industry ── */
+    .industry-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Workforce ── */
+    .wokforcse-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── How we work ── */
+    .hw-card-box-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Heading row ── */
+    .heading-row {
+        grid-template-columns: 46% 45%;
+        gap: var(--space-16);
+    }
+
+    /* ── Footer ── */
+    .footer__main {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-32);
+    }
+
+    /* ── Partners strip ── */
+    .footer__partners-grid {
+        justify-content: center;
+        gap: var(--space-24) var(--space-40);
+    }
+}
+
+
+/* =============================================
+   MD — max-width: 768px
+   (Single-column, mobile-first)
+============================================= */
+@media (max-width: 768px) {
+
+    /* ── Header ── */
+    .header__bar {
+        height: 64px;
+    }
+
+    .mobile-menu {
+        top: 64px;
+    }
+
+    /* ── Hero ── */
+    .hero-section {
+        background-image: none;
+        padding-block: var(--space-60);
+    }
+
+    /* ── About ── */
+    .about-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Services tabs ── */
+    .tab-bar-wrapper .tab-btn {
+        padding: var(--space-12) var(--space-24);
+        font-size: var(--fs-body-sm);
+    }
+
+    .service-tab-container .tab-panel .panel-content {
+        padding: var(--space-24);
+    }
+
+    /* ── Why section ── */
+    .why-feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-section__right {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── CTA section ── */
+    .cta-section__heading {
+        font-size: var(--fs-h2);
+    }
+
+    .cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ── Industry ── */
+    .industry-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── Workforce ── */
+    .wokforcse-card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ── How we work ── */
+    .hw-card-box-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ── Footer ── */
+    .footer__main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        gap: var(--space-12);
+    }
+
+    .footer__bottom-left {
+        flex-wrap: wrap;
+        gap: var(--space-8);
+    }
+
+    .footer__bottom-left .divider {
+        display: none;
+    }
+
+    /* ── Partners ── */
+    .footer__partners-grid {
+        gap: var(--space-20) var(--space-30);
+    }
+}
+
+
+/* =============================================
+   SM — max-width: 575px
+   (Compact mobile)
+============================================= */
+@media (max-width: 575px) {
+
+    br {
+        display: none;
+    }
+
+    /* ── Container ── */
+    .container {
+        width: min(100% - 32px, var(--container));
+    }
+
+    /* ── Logo text ── */
+    .header__logo-text span {
+        display: none;
+    }
+
+    .footer__logo-text span {
+        letter-spacing: 1px;
+        font-size: 11px;
+    }
+
+
+    /* ── Hero ── */
+    .hero__badge {
+        font-size: 12px;
+    }
+
+    /* ── About ── */
+    .about-card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* ── Services ── */
+    .service-tab-container .tab-inner-panel {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Why ── */
+    .why-feature-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .why-section-right {
+        grid-template-columns: 1fr;
+    }
+
+    .why-stat-card {
+        padding: var(--space-20);
+        min-height: 120px;
+    }
+
+    .why-stat-card-value {
+        font-size: var(--fs-h4);
+    }
+
+    .why-stat-card.long-card {
+        min-height: auto;
+    }
+
+    /* ── How we work ── */
+    .hw-card-box-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* ── Industry ── */
+    .industry-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ── Workforce ── */
+    .wokforcse-card-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    /* ── Footer ── */
+    .footer__main {
+        grid-template-columns: 1fr;
+        gap: var(--space-32);
+    }
+
+    .footer__address-col {
+        grid-column: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__partners-grid {
+        gap: var(--space-16) var(--space-20);
+    }
+
+    .footer__partner-logo .partner-name {
+        font-size: var(--fs-body);
+    }
+
+    .footer__bottom-left {
+        justify-content: center;
+    }
+
+    /* ── About card ── */
+    .about-card-box {
+        padding: var(--space-16);
+    }
+
+    /* ── Workforce card ── */
+    .wokforcse-card-box {
+        padding: var(--space-24);
+    }
+
+    /* ── How we work card ── */
+    .hw-card-box {
+        padding: var(--space-24);
+    }
+
+    .heading-row {
+        grid-template-columns: 1fr;
+        gap: var(--space-16);
+    }
+}
